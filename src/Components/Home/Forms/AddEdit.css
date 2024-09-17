@@ -1,0 +1,157 @@
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.modalContainer {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 1100;
+}
+
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.modalHeader h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modalHeader .closeButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+}
+
+/* Form Input Fields */
+.modalForm input {
+  padding: 15px 0 15px 10px;
+  border: 2px solid #e4e4e4;
+  width: 100%;
+  outline-color: black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modalForm input:focus {
+  border-color: black;
+}
+
+/* Form Field Labels */
+.modalForm label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Dropdown for Category */
+.modalForm select {
+  padding: 15px 0 15px 10px;
+  border: 2px solid #e4e4e4;
+  border-radius: 5px;
+  outline-color: black;
+  width: 103%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modalForm select:focus {
+  border-color: black;
+}
+
+/* Submit Button */
+.modalForm button {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 103%;
+}
+
+.modalForm button:hover {
+  background-color: #333;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 450px) {
+  .modalContainer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modalContainer {
+    padding: 15px;
+  }
+
+  .modalForm input,
+  .modalForm select {
+    padding: 15px;
+  }
+
+  .modalForm button {
+    padding: 15px;
+  }
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.parent-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+}
+
+.img-preview {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
